@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Classes\Scraper;
+use App\Classes\Malaysiakini;
 
 class DashboardController extends Controller
 {
     //
     public function index()
     {
-        $crawler = Scraper::scrap();
+        $crawler = (new Malaysiakini)->scrapLink();
 
-        // $crawler->filter('h2 > a')->each(function ($node) {
-        //     print $node->text() . "\n";
-        // });
         dd($crawler);
 
     }
