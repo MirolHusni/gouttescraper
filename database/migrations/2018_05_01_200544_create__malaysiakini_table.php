@@ -16,9 +16,9 @@ class CreateMalaysiakiniTable extends Migration
         Schema::create('malaysiakini', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('content');
-            $table->string('url');
-            $table->string('date_published');
+            $table->text('content');
+            $table->string('url')->unique();
+            $table->timestamp('date_published');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateMalaysiakiniTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_malaysiakini');
+        Schema::dropIfExists('malaysiakini');
     }
 }

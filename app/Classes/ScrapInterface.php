@@ -6,6 +6,6 @@ interface ScrapInterface
 {
     public function scrapLink();
 
-    public function scrapContent();
+    public function scrapAndSave($url);
 
 }

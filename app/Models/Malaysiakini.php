@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Malaysiakini extends Model
 {
     //
-    protected $table   = 'Malaysiakini';
+    protected $table   = 'malaysiakini';
     protected $guarded = [];
 }
