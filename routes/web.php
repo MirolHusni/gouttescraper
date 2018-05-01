@@ -11,11 +11,11 @@
 |
  */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/', 'DashboardController@index');
+Route::get('/', function () {
+    return view('dashboard.index');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/malaysiakini', 'MalaysiakiniCrawlerController');
