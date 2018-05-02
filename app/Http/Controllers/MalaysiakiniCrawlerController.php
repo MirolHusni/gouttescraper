@@ -26,7 +26,7 @@ class MalaysiakiniCrawlerController extends Controller
     public function show()
     {
         $site    = 'Malaysiakini';
-        $reports = MK::all();
+        $reports = MK::paginate(15);
 
         return view('crawl.show', compact('reports', 'site'));
     }

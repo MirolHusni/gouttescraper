@@ -19,7 +19,7 @@
                         <th>#</th>
                         <th>Title</th>
                         <th>Content</th>
-                        <th>Link</th>
+                        <th>URL</th>
                         <th>Published Date</th>
                       </tr>
                     </thead>
@@ -38,6 +38,7 @@
                     </tbody>
                   </table>
                 </div>
+                {{ $reports->links() }}
             </div>
         </div>
     </div>
